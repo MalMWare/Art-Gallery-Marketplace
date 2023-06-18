@@ -1,6 +1,4 @@
-import './css/artistpage.css'
 import ArtCarousel from "./Carousel.js";
-
 
 export default function ArtistView({artist}) {
     return <div className='artist-container'>
