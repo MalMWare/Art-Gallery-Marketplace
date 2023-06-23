@@ -1,7 +1,8 @@
+import React from "react"
 import useFetch from "./custom-hooks/useFetch"
 import { Link, useNavigate } from "react-router-dom"
 
-export default function CommissionItem({commission}){
+export default function CommissionItem({commission}: {commission: any}){
     const { title, name, due_date, price, description, _id } = commission
 
     const date = new Date(due_date)

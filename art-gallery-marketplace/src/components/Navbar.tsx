@@ -2,16 +2,17 @@ import { NavLink } from "react-router-dom"
 import { AiOutlineSearch } from 'react-icons/ai'
 import { CartContext } from "./context/CartContext"
 import { useContext } from "react"
+import React from "react"
 
 
 export default function MainNav() {
-  const { cart } = useContext(CartContext)
+  const { cart } = useContext<any>(CartContext)
 
-  const getClassItem = ({isActive}) => {
+  const getClassItem = ({isActive}: {isActive: boolean}) => {
     return `nav-link ${isActive ? 'bg-dark text-light' : ''}`
   }
 
-  const getClassBrand = ({isActive}) => {
+  const getClassBrand = ({isActive}: {isActive: boolean}) => {
     return `navbar-brand nav-link ${isActive ? 'bg-dark text-light' : ''}`
   }
 
@@ -39,7 +40,7 @@ export default function MainNav() {
         <input type='text' placeholder='Search...' />
       </div>
       <NavLink className="nav-link navbar-right btn btn-dark px-3 py-2" to="/cart">
-        Cart {!cart.length ? '' : `(${cart.reduce((s,i) => s+i.quantity, 0)})`}
+        Cart {!cart.length ? '' : `(${cart.reduce((s: number,i: any) => s+i.quantity, 0)})`}
       </NavLink>
     </div>
   </nav>

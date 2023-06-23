@@ -2,7 +2,7 @@ export default function useFetch() {
 const baseUrl = 'https://art-gallery-marketplace.vercel.app'
 
   return {
-    get: async endpoint => {
+    get: async (endpoint: string) => {
       try {
         const res = await fetch(baseUrl+endpoint)
         return await res.json()
@@ -10,7 +10,7 @@ const baseUrl = 'https://art-gallery-marketplace.vercel.app'
         return err
       }
     },
-    post: async (endpoint, body) => {
+    post: async (endpoint: string, body: any) => {
       try {
         const res = await fetch(baseUrl+endpoint, {
           method: "POST",
@@ -24,7 +24,7 @@ const baseUrl = 'https://art-gallery-marketplace.vercel.app'
         return err
       }
     },
-    put: async (endpoint, body) => {
+    put: async (endpoint: string, body: any) => {
       try {
         const res = await fetch(baseUrl+endpoint, {
           method: 'PUT',
@@ -38,7 +38,7 @@ const baseUrl = 'https://art-gallery-marketplace.vercel.app'
         return err
       }
     },
-    remove: async endpoint => {
+    remove: async (endpoint: string) => {
       try {
         const res = await fetch(baseUrl+endpoint, {
           method: 'DELETE'

@@ -3,6 +3,7 @@ import './css/footer.css'
 import { AiFillTwitterCircle } from "react-icons/ai"
 import { BsFacebook, BsLinkedin } from "react-icons/bs"
 import { RiInstagramFill } from "react-icons/ri"
+import React from 'react'
 
 export default function Footer(){
   return <div className="bg-dark text-secondary m-2">

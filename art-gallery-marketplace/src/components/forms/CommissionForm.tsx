@@ -2,8 +2,9 @@ import Input from "../ui-kit/Input"
 import TextArea from "../ui-kit/TextArea"
 import '../css/commission-form.css'
 import useFormHandler from "../custom-hooks/useFormHandler"
+import React from "react"
 
-export default function CommissionForm(props) {
+export default function CommissionForm(props: any) {
   const { legend, onSubmit, formInputs } = props
 
   const fI = formInputs ? formInputs : {

@@ -2,6 +2,7 @@ import ArtCarousel from "./Carousel";
 import AboutUs from "./AboutUs"
 import useFetch from "./custom-hooks/useFetch";
 import { useEffect, useState } from "react";
+import React from "react";
 
 export default function HomeView() {
   const { get } = useFetch()

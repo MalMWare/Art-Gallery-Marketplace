@@ -1,8 +1,9 @@
 import Input from '../ui-kit/Input'
 import TextArea from '../ui-kit/TextArea'
 import useFormHandler from "../custom-hooks/useFormHandler"
+import React from 'react'
 
-export default function ArtworkForm(props) {
+export default function ArtworkForm(props: any) {
   const { legend, onSubmit, formInputs } = props
 
   const fI = formInputs ? formInputs : {

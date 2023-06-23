@@ -1,8 +1,9 @@
 import './css/artistpage.css'
-import ArtCarousel from "./Carousel.js";
+import ArtCarousel from "./Carousel";
+import React from 'react';
 
 
-export default function ArtistView({artist}) {
+export default function ArtistView({artist}: {artist: any}) {
     return <div className='artist-container'>
         <h1 className="text-light">{artist.name}</h1>        
         <img style={{ 'borderRadius': '50%', 'marginLeft': 'auto', 'marginRight': 'auto' }} src={artist.image} className='center' alt="Artist" />

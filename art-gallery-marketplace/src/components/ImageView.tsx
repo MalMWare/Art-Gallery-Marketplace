@@ -1,11 +1,12 @@
+import React from 'react';
 import './css/images.css'
 import useFetch from './custom-hooks/useFetch';
 import { useEffect, useState } from 'react';
 
-export default function ImageView({image}) {
+export default function ImageView({image}: {image: any}) {
     const { get } = useFetch()
 
-    const [artist, setArtist] = useState([])
+    const [artist, setArtist] = useState<any>([])
 
     useEffect(() => {
         (async () => {
@@ -15,7 +16,7 @@ export default function ImageView({image}) {
     }, [])
 
     return (
-        <div className="bg-secondary rounded-4" style={{ width:"30vw", height: '100%', display:"inline-block", "text-align": "center"}}>
+        <div className="bg-secondary rounded-4" style={{ width:"30vw", height: '100%', display:"inline-block", textAlign: "center"}}>
             <h1 className="text-light">{image.title}</h1>        
             <img style={{ margin: 'auto' }} src={image.pic} className='center' alt="Image" />
             {!artist

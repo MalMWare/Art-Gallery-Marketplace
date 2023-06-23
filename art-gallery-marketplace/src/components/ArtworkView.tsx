@@ -3,13 +3,14 @@ import useFetch from './custom-hooks/useFetch';
 import { useContext, useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CartContext } from './context/CartContext';
+import React from 'react';
 
 export default function ArtworkView() {
-    const { handleCartAdd } = useContext(CartContext)
+    const { handleCartAdd } = useContext<any>(CartContext)
     const { get, remove } = useFetch()
 
-    const [image, setImage] = useState([])
-    const [artist, setArtist] = useState([])
+    const [image, setImage] = useState<any>([])
+    const [artist, setArtist] = useState<any>([])
 
     const params = useParams()
 

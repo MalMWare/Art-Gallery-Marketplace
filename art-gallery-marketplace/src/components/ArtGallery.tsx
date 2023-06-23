@@ -1,3 +1,4 @@
+import React from "react";
 import ImageView from "./ImageView";
 import useFetch from "./custom-hooks/useFetch";
 import { useEffect, useState } from "react";
@@ -17,7 +18,7 @@ export default function ArtGallery(){
         <div>
             <h1>Art Gallery</h1>
             <div className="grid-container bg-dark" >
-                {data.map(image => {return <Link to={`/artworks/${image._id}`}><ImageView image={image}/></Link>})}
+                {data.map((image: any) => {return <Link to={`/artworks/${image._id}`}><ImageView image={image}/></Link>})}
             </div>
         </div>
     )

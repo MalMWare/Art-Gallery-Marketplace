@@ -1,6 +1,7 @@
 import ArtworkForm from "./forms/ArtworkForm"
 import useFetch from "./custom-hooks/useFetch"
 import { useNavigate, useParams } from "react-router-dom"
+import React from "react"
 
 export default function NewArtwork() {
   const { post } = useFetch()
@@ -9,10 +10,10 @@ export default function NewArtwork() {
 
   const navigate = useNavigate()
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e: Event) => {
     e.preventDefault()
 
-    const { title, pic, description, price, year, style, size, copies} = e.target
+    const { title, pic, description, price, year, style, size, copies}: any = e.target
 
     await post('/artworks', {
       title: title.value,

@@ -3,15 +3,15 @@ import Carousel from 'react-bootstrap/Carousel';
 import '../app.css'
 import { Link } from "react-router-dom";
 
-export default function ArtCarousel({artworks}) {
+export default function ArtCarousel({artworks}: {artworks: any}) {
 
   const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
 
   return <Carousel className="mx-auto w-75 p-5 shadow p-3 bg-secondary mt-5 rounded-4" activeIndex={index} onSelect={handleSelect}>
-    {artworks.map((slide, i) => {
+    {artworks.map((slide: any, i: number) => {
       return <Carousel.Item className="carouselItem" interval={5000} key={i}>
         <Link to={`/artworks/${slide._id}`}>
           <img

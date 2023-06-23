@@ -2,6 +2,7 @@ import ArtworkForm from "./forms/ArtworkForm"
 import useFetch from "./custom-hooks/useFetch"
 import { useNavigate, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import React from "react"
 
 export default function EditArtwork() {
   const { get, put } = useFetch()
@@ -10,7 +11,7 @@ export default function EditArtwork() {
 
   const navigate = useNavigate()
 
-  const [artwork, setArtwork] = useState({})
+  const [artwork, setArtwork] = useState<any>({})
 
   useEffect(() => {
     (async () => {
@@ -19,10 +20,10 @@ export default function EditArtwork() {
     })()
   }, [])
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e: Event) => {
     e.preventDefault()
 
-    const { title, pic, description, price, year, style, size, copies} = e.target
+    const { title, pic, description, price, year, style, size, copies}: any = e.target
 
     await put(`/artworks/${params.id}`, {
       title: title.value,

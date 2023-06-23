@@ -2,13 +2,14 @@ import ArtistForm from "./forms/ArtistForm"
 import useFetch from "./custom-hooks/useFetch"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import React from "react"
 
 export default function EditArtist() {
   const params = useParams()
 
   const { get, put } = useFetch()
 
-  const [artist, setArtist] = useState({})
+  const [artist, setArtist] = useState<any>({})
 
   useEffect(() => {
     (async () => {
@@ -17,10 +18,10 @@ export default function EditArtist() {
     })()
   }, [])
   
-  const handleSubmit = e => {
+  const handleSubmit = (e: Event) => {
     e.preventDefault()
 
-    const { name, phone, email, image, style, bio } = e.target
+    const { name, phone, email, image, style, bio }: any = e.target
 
     put(`/artists/${params.id}`, {
       name: name.value,

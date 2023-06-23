@@ -1,4 +1,6 @@
-export default function TextArea(props) {
+import React from "react"
+
+export default function TextArea(props: any) {
     const { label, className, value, onChange, required, ...rest } = props
   
     const classes = `input textarea ${className}`

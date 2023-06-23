@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from './context/CartContext'
+import React from 'react'
 
-export default function CartItem({ item }) {
+export default function CartItem({ item }: {item: any}) {
   const {
     title,
     pic,
@@ -11,7 +12,7 @@ export default function CartItem({ item }) {
     quantity
   } = item
 
-  const { handleCartRemove } = useContext(CartContext)
+  const { handleCartRemove } = useContext<any>(CartContext)
 
   return <div className="cart-item bg-light rounded-end my-3">
     <div className="mh-100 item-img-container">

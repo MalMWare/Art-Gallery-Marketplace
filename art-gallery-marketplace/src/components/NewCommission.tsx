@@ -1,3 +1,4 @@
+import React from "react";
 import useFetch from "./custom-hooks/useFetch";
 import CommissionForm from "./forms/CommissionForm";
 import { useNavigate, useOutletContext } from 'react-router-dom'
@@ -7,12 +8,12 @@ export default function NewCommission() {
   
   const navigate = useNavigate()
   
-  const { artist } = useOutletContext()
+  const { artist } = useOutletContext<any>()
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e: Event) => {
     e.preventDefault()
 
-    const {name, title, description, price, due_date} = e.target
+    const {name, title, description, price, due_date}: any = e.target
 
     await post('/commissions', {
       name: name.value,

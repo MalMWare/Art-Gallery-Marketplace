@@ -14,6 +14,7 @@ import DeleteArtistView from "./components/DeleteArtistView";
 import ArtworkView from "./components/ArtworkView"
 import NewArtwork from "./components/NewArtwork";
 import EditArtwork from "./components/EditArtwork";
+import React from "react";
 
 function App() {
   return (

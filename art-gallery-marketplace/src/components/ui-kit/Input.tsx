@@ -1,4 +1,6 @@
-export default function Input(props) {
+import React from "react"
+
+export default function Input(props: any) {
   const { label, className, type, value, onChange, required, ...rest } = props
 
   const classes = `input ${className}`
