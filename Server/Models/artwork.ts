@@ -1,8 +1,3 @@
-// Require mongoose
-const mongoose = require('mongoose');
-// Creating shorthand for the Schema constructor
-const { Schema } = mongoose;
-
 // Schema
 const artworkSchema = new Schema({
   title: { type: String, required: true },
@@ -21,7 +16,7 @@ const artworkSchema = new Schema({
   })
 
 // Helper Methods
-artworkSchema.methods.getArtworkBy = function () {
+artworkSchema.methods.getArtworkBy = function (this:any) {
   return `This ${this.title} was created by ${this.artist?.name}!`
 };
 

@@ -1,9 +1,8 @@
 const artworks = require("express").Router()
-const Artwork = require('../Models/artwork.js')
 const artworkSeedData = require('../Seeders/artwork_data.js')
 
 //FIND ALL ARTWORKS
-artworks.get('/', async (req, res) => {
+artworks.get('/', async (req: any, res: any) => {
     try{
         const foundArtworks = await Artwork.find()
         res.json(foundArtworks)
@@ -16,7 +15,7 @@ artworks.get('/', async (req, res) => {
 
 //SEED DATA
 //will be removed for final implementation
-artworks.get('/seed', async (req, res) => {
+artworks.get('/seed', async (req: any, res: any) => {
     try {
         await Artwork.insertMany(artworkSeedData)
         res.status(201).json({ message: 'Seeded data successfully' })
@@ -27,7 +26,7 @@ artworks.get('/seed', async (req, res) => {
 })
 
 //FIND SPECIFIC ARTWORKS
-artworks.get('/:id', async (req, res) => {
+artworks.get('/:id', async (req: any, res: any) => {
     try {
         const foundArtwork = await Artwork.findById(req.params.id)
         res.status(200).json(foundArtwork)
@@ -39,7 +38,7 @@ artworks.get('/:id', async (req, res) => {
 })
 
 //CREATE ARTWORKS
-artworks.post('/', async (req, res) => {
+artworks.post('/', async (req: any, res: any) => {
     try {
         const newArtwork = await Artwork.create(req.body)
         res.status(201).json({
@@ -54,7 +53,7 @@ artworks.post('/', async (req, res) => {
 })
 
 //UPDATE ARTWORKS INFORMATION
-artworks.put('/:id', async (req, res) => {
+artworks.put('/:id', async (req: any, res: any) => {
     try {
         const updatedArtwork = await Artwork.findByIdAndUpdate(req.params.id, req.body, {
             new: true
@@ -71,7 +70,7 @@ artworks.put('/:id', async (req, res) => {
 })
 
 //DELETE AN artworks
-artworks.delete('/:id', async (req, res) => {
+artworks.delete('/:id', async (req: any, res: any) => {
     try {
         const deletedArtwork = await Artwork.findByIdAndDelete(req.params.id)
         res.status(200).json({

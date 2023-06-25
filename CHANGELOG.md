@@ -1,0 +1,142 @@
+- implemented typescript on the front end
+- downloadedtypescript and converted files in front end to typescript
+- delete artwork
+- Merge branch 'README'
+- updated readme
+- fixes
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- added css on art gallery and art view.
+- bug fix
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- artwork forms
+- added more to readme
+- styling added to carousel and artist gallery
+- Added add-to-cart button and artist name by id
+- Merge branch 'main' into Views-2.0
+- pull and fix minor bugs
+- major changes and bug fixes
+- added styling
+- added ability to delete an artist profile
+- Rename Textarea.js to TextArea.js
+- cart functionality and small fixes
+- Merge branch 'Styling'
+- implemented commissions view and styling
+- fix
+- fix navbar
+- Added new ArtworkView Component and have it display on the main browser when specific image is clicked.
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- fix
+- fixed server
+- updated artwork data
+- Merge branch 'DB'
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- pull accepted
+- updated the artwork link
+- Merge branch 'Styling'
+- bug fixes and grid styling
+- favicon
+- fixed navbar icon
+- Merge branch 'CartView'
+- Merge branch 'Footer2' of https://github.com/INS140/Art-Gallery-Marketplace
+- added alignment to text
+- Merge branch 'Styling' into Main
+- added icon and hyperlinks to contributors
+- fetching data into components
+- added styling to contributors
+- CartContext and CartView
+- Merge branch 'main' into Views-2.0
+- adust social-icon
+- update json
+- Merge branch 'CartView' of https://github.com/INS140/Art-Gallery-Marketplace into CartView
+- added CartView
+- bug fix 4
+- bug fix 3
+- add search bar
+- add social icon
+- bug fix 2
+- bug fix
+- refactor
+- Merge branch 'Forms'
+- bug fix
+- ArtworkForm
+- update
+- Merge branch 'README'
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- typo
+- fix nav, add image links, made artist gallery/item
+- added languages
+- added Views and Goals
+- my link
+- ArtistForm and JoinUs page
+- added database tables to README
+- started database table
+- added routes
+- useFormHandler and setup NewArtistForm
+- added cors and useFetch
+- commissions form update
+- Merge branch 'Routing'
+- finished routes and seeded data
+- added github link
+- updated commissions_controller
+- updated artworks_controller
+- remove second copyright
+- Merge branch 'Footer'
+- svg file and changes to public
+- added empty links and styling, removed excess code
+- err handling
+- small bug fix
+- refactor models and fleshed out routes for artist controller
+- .
+- update
+- swtich to new branch, fixed artist schema, artwork schema need to work
+- Art gallery and art view skeleton completed
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- about us component completed
+- fix frontend package
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- fix package
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- Merge branch 'Footer'
+- fixed package
+- rearranged files to backend
+- added country, language, and currency
+- Merge branch 'AnnieL-DB'
+- ready to merge
+- Merge branch 'Commissions-form'
+- form skeleton and small refactors
+- edit imgs, insert date to database
+- ..
+- ..
+- fix some functions
+- add artist and artwork data
+- add seeders
+- styling changes
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- Artist View and Footer modified
+- Merge branch 'Styling'
+- react router dom functionality and nav
+- fix for vercel config
+- merge main with Deploy
+- test routes
+- added mongoose skeleton
+- move file location
+- catch-all
+- home route
+- export app
+- added vercel config file
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- Merge branch 'main' into Views
+- Merge with bootstrap
+- bootstrap
+- Merge branch 'main' of https://github.com/INS140/Art-Gallery-Marketplace
+- server folder added
+-  carousel component started for home  view
+- carousel component started for home view
+- Completed skeleton plan for components
+- add migrations & seeders folder
+- commissions_controller added
+- images_controller added
+- artist_controller added
+- CRA
+- Backend Initial
+- inital

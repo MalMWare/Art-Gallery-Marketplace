@@ -1,9 +1,8 @@
 const artists = require("express").Router()
-const Artist = require('../Models/artist.js')
 const artistSeedData = require('../Seeders/artist_data.js')
 
 //FIND ALL ARTISTS
-artists.get('/', async (req, res) => {
+artists.get('/', async (req: any, res: any) => {
     try{
         const foundArtists = await Artist.find()
             .populate({ path : 'artworks', options: { limit: 5 } })
@@ -17,7 +16,7 @@ artists.get('/', async (req, res) => {
 
 //SEED DATA
 //will be removed for final implementation
-artists.get('/seed', async (req, res) => {
+artists.get('/seed', async (req: any, res: any) => {
     try {
         await Artist.insertMany(artistSeedData)
         res.status(201).json({ message: 'Seeded data successfully' })
@@ -28,7 +27,7 @@ artists.get('/seed', async (req, res) => {
 })
 
 //FIND SPECIFIC ARTIST
-artists.get('/:id', async (req, res) => {
+artists.get('/:id', async (req: any, res: any) => {
     try {
         const foundArtist = await Artist.findById(req.params.id)
             .populate('artworks')
@@ -42,7 +41,7 @@ artists.get('/:id', async (req, res) => {
 })
 
 //CREATE ARTIST
-artists.post('/', async (req, res) => {
+artists.post('/', async (req: any, res: any) => {
     try {
         const newArtist = await Artist.create(req.body)
         res.status(201).json({
@@ -57,7 +56,7 @@ artists.post('/', async (req, res) => {
 })
 
 //UPDATE ARTIST INFORMATION
-artists.put('/:id', async (req, res) => {
+artists.put('/:id', async (req: any, res: any) => {
     try {
         const updatedArtist = await Artist.findByIdAndUpdate(req.params.id, req.body, {
             new: true
@@ -74,7 +73,7 @@ artists.put('/:id', async (req, res) => {
 })
 
 //DELETE AN ARTIST
-artists.delete('/:id', async (req, res) => {
+artists.delete('/:id', async (req: any, res: any) => {
     try {
         const deletedArtist = await Artist.findByIdAndDelete(req.params.id)
         res.status(200).json({

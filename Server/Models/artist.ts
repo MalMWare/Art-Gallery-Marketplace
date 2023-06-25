@@ -1,11 +1,3 @@
-// Require mongoose
-const mongoose = require('mongoose');
-// Creating shorthand for the Schema constructor
-const { Schema } = mongoose;
-const Artwork = require('./artwork.js');
-const Commission = require('./commission.js');
-
-
 // Schema
     const artistSchema = new Schema({
         name: { type: String, required: true },   
@@ -29,9 +21,9 @@ const Commission = require('./commission.js');
         foreignField: 'artist'
     })
     
-    artistSchema.post('findOneAndDelete', function() {
+    artistSchema.post('findOneAndDelete', function(this: any) {
         Artwork.deleteMany({artist: this._conditions._id})
-            .then(status => console.log(status))
+            .then((status:any) => console.log(status))
     })
 
    

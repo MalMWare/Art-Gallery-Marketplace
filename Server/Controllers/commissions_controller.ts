@@ -1,9 +1,8 @@
 const commissions = require("express").Router()
-const Commission = require('../Models/commission.js')
 const commissionSeedData = require('../Seeders/commission_data.js')
 
 //FIND ALL COMMISSIONS
-commissions.get('/', async (req, res) => {
+commissions.get('/', async (req: any, res: any) => {
     try{
         const foundCommissions = await Commission.find()
         res.json(foundCommissions)
@@ -16,7 +15,7 @@ commissions.get('/', async (req, res) => {
 
 //SEED DATA
 //will be removed for final implementation
-commissions.get('/seed', async (req, res) => {
+commissions.get('/seed', async (req: any, res: any) => {
     try {
         await Commission.insertMany(commissionSeedData)
         res.status(201).json({ message: 'Seeded data successfully' })
@@ -27,7 +26,7 @@ commissions.get('/seed', async (req, res) => {
 })
 
 //FIND SPECIFIC COMMISSIONS
-commissions.get('/:id', async (req, res) => {
+commissions.get('/:id', async (req: any, res: any) => {
     try {
         const foundCommissions = await Commission.findById(req.params.id)
         res.status(200).json(foundCommissions)
@@ -39,7 +38,7 @@ commissions.get('/:id', async (req, res) => {
 })
 
 //CREATE COMMISSIONS
-commissions.post('/', async (req, res) => {
+commissions.post('/', async (req: any, res: any) => {
     try {
         const newCommission = await Commission.create(req.body)
         res.status(201).json({
@@ -54,7 +53,7 @@ commissions.post('/', async (req, res) => {
 })
 
 //UPDATE COMMISSIONS INFORMATION
-commissions.put('/:id', async (req, res) => {
+commissions.put('/:id', async (req: any, res: any) => {
     try {
         const updatedCommission = await Commission.findByIdAndUpdate(req.params.id, req.body, {
             new: true
@@ -71,7 +70,7 @@ commissions.put('/:id', async (req, res) => {
 })
 
 //DELETE A COMMISSION
-commissions.delete('/:id', async (req, res) => {
+commissions.delete('/:id', async (req: any, res: any) => {
     try {
         const deletedCommission = await Commission.findByIdAndDelete(req.params.id)
         res.status(200).json({
